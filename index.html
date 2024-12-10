@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REO Music</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Swiper JS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <style>
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .swiper-slide:hover {
+      transform: scale(1.05);
+    }
+    .swiper-pagination-bullet {
+      background: #4A90E2;
+    }
+    .about-section {
+      background: linear-gradient(135deg, rgba(243, 244, 246, 0.8), rgba(229, 231, 235, 0.8)), url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fGJhY2tncm91bmR8ZW58MHx8fHwxNjYyMjY2NjY0&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center/cover;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    .music-section {
+      background: #f3f4f6;
+      padding: 40px 0;
+    }
+    .music-card {
+      border-radius: 15px;
+      transition: transform 0.2s;
+    }
+    .music-card:hover {
+      transform: scale(1.05);
+    }
+    .contact-section {
+      background-color: #001f3f; /* Navy blue */
+      padding: 20px 0; /* Reduced padding */
+    }
+    .contact-form {
+      background: rgba(255, 255, 255, 0.2); /* Transparent white */
+      border-radius: 15px;
+      padding: 30px; /* Increased padding */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px); /* Glass effect */
+      animation: float 3s ease-in-out infinite; /* Animation */
+    }
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Navigation -->
+  <header class="bg-gray-900 text-white fixed w-full top-0 z-50 shadow-md">
+    <div class="container mx-auto flex justify-between items-center px-4 py-3">
+      <h1 class="text-2xl font-bold">REO Music</h1>
+      <button id="menu-toggle" class="text-white focus:outline-none sm:hidden">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+      <nav id="menu" class="hidden sm:flex space-x-4">
+        <a href="#about" class="hover:text-gray-400">About</a>
+        <a href="#music" class="hover:text-gray-400">Music</a>
+        <a href="#contact" class="hover:text-gray-400">Contact</a>
+      </nav>
+    </div>
+  </header>
+<!-- Hero Section -->
+<section class="bg-cover bg-center h-screen flex items-center justify-center relative" style="background-image: url('https://i.pinimg.com/736x/7a/74/8b/7a748b2fa8f1fcbec1604a3aa83e09b1.jpg');">
+    <div class="bg-black bg-opacity-50 text-white p-8 rounded-lg text-center">
+      <h1 class="text-4xl font-bold">A Journey of Faith and Music</h1>
+      <p class="mt-4">Transforming lives through the power of gospel music.</p>
+      <a href="#about" class="inline-block bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 mt-6 rounded">Learn More</a>
+    </div>
+  </section>
+  
+  
+
+  <!-- Inspiring Scriptures Section -->
+  <section class="bg-white py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Inspiring Scriptures</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://i.pinimg.com/236x/60/25/7d/60257d1fc9ffd011c6b0e8315ab45656.jpg" alt="Scripture 1" class="rounded-3xl border-4 border-gray-200 w-96 h-96 object-cover shadow-lg">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://i.pinimg.com/474x/7e/be/7f/7ebe7ff832826c46827287ceb0ac0980.jpg" alt="Scripture 2" class="rounded-3xl border-4 border-gray-200 w-96 h-96 object-cover shadow-lg">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://i.pinimg.com/236x/ea/bc/54/eabc5443a282a72ee9a40643aa93af84.jpg" alt="Scripture 3" class="rounded-3xl border-4 border-gray-200 w-96 h-96 object-cover shadow-lg">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://i.pinimg.com/236x/b7/2a/90/b72a9080cef537fb93b86bf40d642d85.jpg" alt="Scripture 4" class="rounded-3xl border-4 border-gray-200 w-96 h-96 object-cover shadow-lg">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16">
+    <div class="container mx-auto px-4 text-center about-section" style="max-width: 66%;">
+      <h2 class="text-3xl font-bold mb-6">About Mrs. Ruth Onoja</h2>
+      <p class="text-gray-600 leading-relaxed mb-4">Mrs. Ruth Onoja is a passionate gospel musician whose mission is to inspire lives through the transformative power of music. With a heart dedicated to worship, she believes that music is a divine gift that can uplift spirits and bring people closer to God.</p>
+      <p class="text-gray-600 leading-relaxed mb-4">Her journey began at a young age, singing in her local church choir, where she discovered her love for gospel music. Over the years, she has performed at numerous events, sharing her message of hope and faith through her songs.</p>
+      <p class="text-gray-600 leading-relaxed mb-4">Mrs. Onoja draws inspiration from scriptures such as:</p>
+      <blockquote class="text-gray-700 italic mb-4">"Let everything that has breath praise the Lord." - Psalm 150:6</blockquote>
+      <blockquote class="text-gray-700 italic mb-4">"Sing to the Lord a new song; sing to the Lord, all the earth." - Psalm 96:1</blockquote>
+      <p class="text-gray-600 leading-relaxed mb-4">Her music is not just entertainment; it is a form of worship that encourages listeners to reflect on their faith and relationship with God. Through her songs, she aims to create an atmosphere of praise and worship, inviting everyone to join in the celebration of God's love.</p>
+      <p class="text-gray-600 leading-relaxed mb-4">Join Mrs. Onoja on this beautiful journey of faith and music, and let the melodies of praise fill your heart and soul.</p>
+    </div>
+  </section>
+
+  <!-- Music Section -->
+  <section id="music" class="music-section">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Music</h2>
+      <div class="flex justify-center space-x-6">
+        <div class="music-card bg-white p-4 rounded-lg shadow-lg transition-transform duration-200 hover:scale-105">
+          <h3 class="text-lg font-semibold mb-2">Cast Your Care</h3>
+          <img src="https://i.pinimg.com/736x/72/de/e1/72dee1424f64f88ae697501307bbe49b.jpg" alt="Cast Your Care" class="rounded-lg mb-2 w-48 h-32 object-cover">
+          <p class="text-gray-600 text-sm">A heartfelt song that encourages listeners to cast their burdens onto the Lord.</p>
+        </div>
+        <div class="music-card bg-white p-4 rounded-lg shadow-lg transition-transform duration-200 hover:scale-105">
+          <h3 class="text-lg font-semibold mb-2">Odubogawu</h3>
+          <img src="https://i.pinimg.com/236x/7b/84/e6/7b84e6898b11ad6fce6c7d248bbaa398.jpg" alt="Odubogawu" class="rounded-lg mb-2 w-48 h-32 object-cover">
+          <p class="text-gray-600 text-sm">An uplifting track that celebrates the goodness of God in our lives.</p>
+        </div>
+        <div class="music-card bg-white p-4 rounded-lg shadow-lg transition-transform duration-200 hover:scale-105">
+          <h3 class="text-lg font-semibold mb-2">God Has Done For Me</h3>
+          <img src="https://i.pinimg.com/736x/b4/36/41/b43641f63739da7581e45fb361a4dd25.jpg" alt="God Has Done For Me" class="rounded-lg mb-2 w-48 h-32 object-cover">
+          <p class="text-gray-600 text-sm">A powerful anthem of gratitude, reflecting on the blessings received from God.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-8 md:mb-0">
+        <img src="https://i.pinimg.com/236x/10/a2/8c/10a28c344d9efa6147d582ff1c8b5735.jpg" alt="Contact Us" class="rounded-lg shadow-lg">
+      </div>
+      <div class="md:w-1/2">
+        <form class="contact-form">
+          <h2 class="text-2xl font-bold text-center mb-4 text-gray-800">Get in Touch</h2>
+          <div class="mb-4">
+            <input type="text" placeholder="Your Name" class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div class="mb-4">
+            <input type="email" placeholder="Your Email" class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          </div>
+          <div class="mb-4">
+            <textarea placeholder="Your Message" class="w-full p-3 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" rows="4"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white p-3 rounded">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-lg font-semibold">Stay Connected</h3>
+      <div class="flex justify-center space-x-4 mt-2">
+        <a href="#" class="text-gray-400 hover:text-gray-300">Facebook</a>
+        <a href="#" class="text-gray-400 hover:text-gray-300">Twitter</a>
+        <a href="#" class="text-gray-400 hover:text-gray-300">Instagram</a>
+      </div>
+      <p class="mt-4">&copy; 2024 REO Music. Designed by Destiny.</p>
+      <div class="mt-4">
+        <a href="#" class="text-gray-400 hover:text-gray-300">Privacy Policy</a>
+        <span class="mx-2">|</span>
+        <a href="#" class="text-gray-400 hover:text-gray-300">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      autoplay: { delay: 3000 },
+      pagination: { el: '.swiper-pagination', clickable: true },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      slidesPerView: 1,
+      spaceBetween: 20,
+      centeredSlides: true,
+    });
+  </script>
+</body>
+</html>
